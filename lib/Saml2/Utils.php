@@ -736,7 +736,7 @@ class OneLogin_Saml2_Utils
      */
     public static function generateUniqueID()
     {
-        return 'ONELOGIN_' . sha1(uniqid((string)random_int(0,99), true));
+        return 'ONELOGIN_' . sha1(uniqid((string) openssl_random_pseudo_bytes(), true));
     }
 
     /**
